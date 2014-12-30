@@ -187,46 +187,41 @@ namespace CompetencePlus.Tools
                 String query = "CREATE TABLE VersionDB ( ID AUTOINCREMENT PRIMARY KEY, Version varchar(255));";
                 this.ExecuteQuery(query);
             }
-            try
-            {
-                this.UpgradeDaTabase();
-            }
-            catch (Exception)
-            {
-                
-                // Initialisation de la base données
-            }
-           
-
+            
+            this.UpgradeDaTabase();
             return true;
         }
 
+        /// <summary>
+        /// Exécuter les requête non déja exécutés
+        /// </summary>
         private void UpgradeDaTabase()
         {
             IncrementDB_DAO incrementDB_DAO = new IncrementDB_DAO();
-            String CodeLastIncrement = this.CodeLastIncrement();
-            IEnumerable<IncrementationDB> ListeIncrement;
-            if (CodeLastIncrement != null)
-            {
-                IncrementationDB LastIncrement = incrementDB_DAO.findByCode(CodeLastIncrement);
-                ListeIncrement = incrementDB_DAO.Select().Where(i => i.DateCreation > LastIncrement.DateCreation);
-            }
-            else
-            {
-                ListeIncrement = incrementDB_DAO.Select();
-            }
+            String requete_erreur = "";
+          
+          
+            // Liste de tous les requêtes
+            IEnumerable<IncrementationDB> listQueryDB = new IncrementDB_DAO().SelectFromDB();
+            // Liste de tous les requêtes déja exécuté
+            IEnumerable<IncrementationDB> listQueryXML = new IncrementDB_DAO().SelectFromXML();
+            // Trouvre les requêtes non déja exécuté
+            IEnumerable<IncrementationDB> listeQueryNoteExecut = listQueryXML.Except(listQueryDB,new IncrementationDB()).ToList<IncrementationDB>();
 
             try
             {
-                foreach (var increment in ListeIncrement.OrderBy(i => i.DateCreation))
+                foreach (var increment in listeQueryNoteExecut.OrderBy(i => i.DateCreation))
                 {
+                    requete_erreur = increment.Increment;
                     this.ExecutIncrementation(increment);
                 }
             }
             catch (Exception ex)
             {
-
-                throw new Exception(ex.Message + ": Supprimer la base de données pour une initialisation automatique");
+                throw new Exception(ex.Message + "\n" 
+                    + "Erreur dans l'exécution de la requête : \n"
+                    + requete_erreur + "\n"
+                    +  "Solution : Supprimer la base de données pour une initialisation automatique");
             }
            
 
