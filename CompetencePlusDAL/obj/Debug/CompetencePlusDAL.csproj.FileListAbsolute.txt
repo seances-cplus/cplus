@@ -45,3 +45,9 @@ C:\Users\Zbaaakh\Desktop\NotesCplus\cplus\CompetencePlusDAL\obj\Debug\Interop.AD
 C:\Users\Zbaaakh\Desktop\NotesCplus\cplus\CompetencePlusDAL\obj\Debug\CompetencePlusDAL.csproj.ResolveComReference.cache
 C:\Users\Zbaaakh\Desktop\NotesCplus\cplus\CompetencePlusDAL\obj\Debug\CompetencePlusDAL.dll
 C:\Users\Zbaaakh\Desktop\NotesCplus\cplus\CompetencePlusDAL\obj\Debug\CompetencePlusDAL.pdb
+C:\Users\THINKPAD\Documents\GitHub\cplus\CompetencePlusDAL\bin\Debug\CompetencePlusDAL.dll
+C:\Users\THINKPAD\Documents\GitHub\cplus\CompetencePlusDAL\bin\Debug\CompetencePlusDAL.pdb
+C:\Users\THINKPAD\Documents\GitHub\cplus\CompetencePlusDAL\obj\Debug\Interop.ADOX.dll
+C:\Users\THINKPAD\Documents\GitHub\cplus\CompetencePlusDAL\obj\Debug\CompetencePlusDAL.csproj.ResolveComReference.cache
+C:\Users\THINKPAD\Documents\GitHub\cplus\CompetencePlusDAL\obj\Debug\CompetencePlusDAL.dll
+C:\Users\THINKPAD\Documents\GitHub\cplus\CompetencePlusDAL\obj\Debug\CompetencePlusDAL.pdb
