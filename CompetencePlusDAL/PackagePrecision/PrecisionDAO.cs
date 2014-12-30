@@ -31,18 +31,26 @@ namespace CompetencePlus.PackagePrecision
         public List<Precision> Select()
         {
 
-            throw new NotImplementedException();
+            List<Precision> p = new List<Precision>();
+            string req = "Select * From [Precisions]";
+            OleDbDataReader sqr = MyConnection.ExecuteReader(req);
+            while (sqr.Read())
+            {
+                p.Add(new Precision(sqr.GetInt32(0), sqr.GetInt32(1), sqr.GetString(2), sqr.GetString(3), sqr.GetInt32(4), sqr.GetInt32(5)));
+            }
+            MyConnection.Close();
+            return p;
         }
 
 
         public Precision FindById(int id)
         {
             List<Precision> p = new List<Precision>();
-            string req = "Select * From [Precisions] where Mod_id =" + id;
+            string req = "Select * From [Precisions] where id =" + id;
             OleDbDataReader sqr = MyConnection.ExecuteReader(req);
             while (sqr.Read())
             {
-                p.Add(new Precision(sqr.GetInt32(0), new ModuleDAO().getModulepre(sqr.GetInt32(1)), sqr.GetString(2), sqr.GetString(3), sqr.GetInt32(4), sqr.GetInt32(5)));
+                p.Add(new Precision(sqr.GetInt32(0), sqr.GetInt32(1), sqr.GetString(2), sqr.GetString(3), sqr.GetInt32(4), sqr.GetInt32(5)));
             }
             MyConnection.Close();
             return p.ElementAt(0);
@@ -50,11 +58,11 @@ namespace CompetencePlus.PackagePrecision
         public List<Precision> GetallPres(int id)
         {
             List<Precision> p = new List<Precision>();
-            string req = "Select * From [Precisions] where Mod_id =" + id;
+            string req = "Select * From [Precisions] where id =" + id;
             OleDbDataReader sqr = MyConnection.ExecuteReader(req);
             while (sqr.Read())
             {
-                p.Add(new Precision(sqr.GetInt32(0), new ModuleDAO().getModulepre(sqr.GetInt32(1)), sqr.GetString(2), sqr.GetString(3), sqr.GetInt32(4), sqr.GetInt32(5)));
+                p.Add(new Precision(sqr.GetInt32(0), sqr.GetInt32(1), sqr.GetString(2), sqr.GetString(3), sqr.GetInt32(4), sqr.GetInt32(5)));
             }
             MyConnection.Close();
             return p;

@@ -218,6 +218,7 @@
     <None Include="Properties\DataSources\CompetencePlus.PackageDB.IncrementationDB.datasource" />
     <None Include="Properties\DataSources\CompetencePlus.PackageFilieres.Filiere.datasource" />
     <None Include="Properties\DataSources\CompetencePlus.PackageGroupes.Groupe.datasource" />
+    <None Include="Properties\DataSources\CompetencePlus.PackageModules.Module.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

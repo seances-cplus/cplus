@@ -32,6 +32,7 @@ namespace CompetencePlus.PackageModules
           OleDbDataReader da = MyConnection.ExecuteReader(req);
           while (da.Read())
           {
+              
               liste.Add(new Module(da.GetInt32(0), new PackageFilieres.FiliereDAO().FindById(da.GetInt32(1)), new PackagePrecision.PrecisionDAO().FindById(da.GetInt32(2)), da.GetString(3), da.GetInt32(4), da.GetString(5), da.GetString(6), da.GetString(7), da.GetString(8), da.GetString(8), da.GetString(9), da.GetString(10), da.GetString(11)));
               
           }
@@ -43,7 +44,7 @@ namespace CompetencePlus.PackageModules
 
       public void Add(Module o)
       {
-          string req = "insert into [Module](id,nom,duree,strategieEnseignement,apprentisage,evaluation,materiel,equipement,competence,presentation,description) values("+o.ID+",'"+o.Nom+"',"+o.Duree+",'"+o.StrategieEnseignement+"','"+o.Apprentisage+"','"+o.Evaluation+"','"+o.Materiel+"','"+o.Equipement+"','"+o.Competence+"','"+o.Presentation+"','"+o.Description+"')";
+          string req = "insert into [Modules](id,nom,duree,strategieEnseignement,apprentisage,evaluation,materiel,equipement,competence,presentation,description) values("+o.ID+",'"+o.Nom+"',"+o.Duree+",'"+o.StrategieEnseignement+"','"+o.Apprentisage+"','"+o.Evaluation+"','"+o.Materiel+"','"+o.Equipement+"','"+o.Competence+"','"+o.Presentation+"','"+o.Description+"')";
           MyConnection.ExecuteNonQuery(req);
       }
       

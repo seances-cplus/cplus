@@ -48,10 +48,6 @@
             this.codeTextBox = new System.Windows.Forms.TextBox();
             this.nomTextBox = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.moduleDataGridView = new System.Windows.Forms.DataGridView();
-            this.precision = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.bajouter = new System.Windows.Forms.DataGridViewImageColumn();
-            this.bsupprimer = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -69,10 +65,14 @@
             this.bpervious = new System.Windows.Forms.Button();
             this.bSuivant = new System.Windows.Forms.Button();
             this.bend = new System.Windows.Forms.Button();
-            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.moduleBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bsupprimer = new System.Windows.Forms.DataGridViewImageColumn();
+            this.bajouter = new System.Windows.Forms.DataGridViewImageColumn();
+            this.precision = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.moduleDataGridView = new System.Windows.Forms.DataGridView();
             nomLabel = new System.Windows.Forms.Label();
             competenceLabel = new System.Windows.Forms.Label();
             dureeLabel = new System.Windows.Forms.Label();
@@ -83,8 +83,8 @@
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.moduleDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.moduleBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.moduleDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // nomLabel
@@ -267,52 +267,6 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Liste Des Modules";
             // 
-            // moduleDataGridView
-            // 
-            this.moduleDataGridView.AutoGenerateColumns = false;
-            this.moduleDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.moduleDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn13,
-            this.dataGridViewTextBoxColumn23,
-            this.dataGridViewTextBoxColumn24,
-            this.precision,
-            this.bajouter,
-            this.bsupprimer});
-            this.moduleDataGridView.DataSource = this.moduleBindingSource;
-            this.moduleDataGridView.Location = new System.Drawing.Point(16, 24);
-            this.moduleDataGridView.MultiSelect = false;
-            this.moduleDataGridView.Name = "moduleDataGridView";
-            this.moduleDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.moduleDataGridView.Size = new System.Drawing.Size(594, 376);
-            this.moduleDataGridView.TabIndex = 0;
-            this.moduleDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.moduleDataGridView_CellClick);
-            this.moduleDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.moduleDataGridView_CellContentClick);
-            this.moduleDataGridView.Click += new System.EventHandler(this.moduleDataGridView_Click);
-            this.moduleDataGridView.MouseClick += new System.Windows.Forms.MouseEventHandler(this.moduleDataGridView_MouseClick);
-            // 
-            // precision
-            // 
-            this.precision.HeaderText = "";
-            this.precision.Name = "precision";
-            this.precision.Text = "precision";
-            this.precision.UseColumnTextForButtonValue = true;
-            // 
-            // bajouter
-            // 
-            this.bajouter.HeaderText = "";
-            this.bajouter.Image = global::CompetencePlus.Properties.Resources.Update;
-            this.bajouter.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.bajouter.Name = "bajouter";
-            this.bajouter.Width = 30;
-            // 
-            // bsupprimer
-            // 
-            this.bsupprimer.HeaderText = "";
-            this.bsupprimer.Image = global::CompetencePlus.Properties.Resources.Delete;
-            this.bsupprimer.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.bsupprimer.Name = "bsupprimer";
-            this.bsupprimer.Width = 30;
-            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "Code";
@@ -435,17 +389,32 @@
             this.bend.UseVisualStyleBackColor = true;
             this.bend.Click += new System.EventHandler(this.bend_Click);
             // 
-            // dataGridViewTextBoxColumn13
+            // moduleBindingSource
             // 
-            this.dataGridViewTextBoxColumn13.DataPropertyName = "ID";
-            this.dataGridViewTextBoxColumn13.HeaderText = "Code";
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            this.moduleBindingSource.DataSource = typeof(CompetencePlus.PackageModules.Module);
             // 
-            // dataGridViewTextBoxColumn23
+            // bsupprimer
             // 
-            this.dataGridViewTextBoxColumn23.DataPropertyName = "Nom";
-            this.dataGridViewTextBoxColumn23.HeaderText = "Nom";
-            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
+            this.bsupprimer.HeaderText = "";
+            this.bsupprimer.Image = global::CompetencePlus.Properties.Resources.Delete;
+            this.bsupprimer.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.bsupprimer.Name = "bsupprimer";
+            this.bsupprimer.Width = 30;
+            // 
+            // bajouter
+            // 
+            this.bajouter.HeaderText = "";
+            this.bajouter.Image = global::CompetencePlus.Properties.Resources.Update;
+            this.bajouter.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.bajouter.Name = "bajouter";
+            this.bajouter.Width = 30;
+            // 
+            // precision
+            // 
+            this.precision.HeaderText = "";
+            this.precision.Name = "precision";
+            this.precision.Text = "precision";
+            this.precision.UseColumnTextForButtonValue = true;
             // 
             // dataGridViewTextBoxColumn24
             // 
@@ -453,9 +422,40 @@
             this.dataGridViewTextBoxColumn24.HeaderText = "Duree";
             this.dataGridViewTextBoxColumn24.Name = "dataGridViewTextBoxColumn24";
             // 
-            // moduleBindingSource
+            // dataGridViewTextBoxColumn23
             // 
-            this.moduleBindingSource.DataSource = typeof(CompetencePlus.PackageModules.Module);
+            this.dataGridViewTextBoxColumn23.DataPropertyName = "Nom";
+            this.dataGridViewTextBoxColumn23.HeaderText = "Nom";
+            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "ID";
+            this.dataGridViewTextBoxColumn13.HeaderText = "Code";
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            // 
+            // moduleDataGridView
+            // 
+            this.moduleDataGridView.AutoGenerateColumns = false;
+            this.moduleDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.moduleDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn13,
+            this.dataGridViewTextBoxColumn23,
+            this.dataGridViewTextBoxColumn24,
+            this.precision,
+            this.bajouter,
+            this.bsupprimer});
+            this.moduleDataGridView.DataSource = this.moduleBindingSource;
+            this.moduleDataGridView.Location = new System.Drawing.Point(16, 24);
+            this.moduleDataGridView.MultiSelect = false;
+            this.moduleDataGridView.Name = "moduleDataGridView";
+            this.moduleDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.moduleDataGridView.Size = new System.Drawing.Size(594, 376);
+            this.moduleDataGridView.TabIndex = 0;
+            this.moduleDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.moduleDataGridView_CellClick);
+            this.moduleDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.moduleDataGridView_CellContentClick);
+            this.moduleDataGridView.Click += new System.EventHandler(this.moduleDataGridView_Click);
+            this.moduleDataGridView.MouseClick += new System.Windows.Forms.MouseEventHandler(this.moduleDataGridView_MouseClick);
             // 
             // FormeGestionModules
             // 
@@ -478,8 +478,8 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.moduleDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.moduleBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.moduleDataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -507,15 +507,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
-        private System.Windows.Forms.DataGridView moduleDataGridView;
-        private System.Windows.Forms.BindingSource moduleBindingSource;
         private System.Windows.Forms.Button bajoutermodule;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn24;
-        private System.Windows.Forms.DataGridViewButtonColumn precision;
-        private System.Windows.Forms.DataGridViewImageColumn bajouter;
-        private System.Windows.Forms.DataGridViewImageColumn bsupprimer;
         private System.Windows.Forms.Button brechercher;
         private System.Windows.Forms.Button bfirst;
         private System.Windows.Forms.Button bpervious;
@@ -523,5 +515,13 @@
         private System.Windows.Forms.Button bend;
         private System.Windows.Forms.HScrollBar hScrollBar1;
         private System.Windows.Forms.Label labelTime;
+        private System.Windows.Forms.DataGridView moduleDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn24;
+        private System.Windows.Forms.DataGridViewButtonColumn precision;
+        private System.Windows.Forms.DataGridViewImageColumn bajouter;
+        private System.Windows.Forms.DataGridViewImageColumn bsupprimer;
+        private System.Windows.Forms.BindingSource moduleBindingSource;
     }
 }

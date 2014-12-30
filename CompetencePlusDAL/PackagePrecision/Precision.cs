@@ -10,19 +10,17 @@ namespace CompetencePlus.PackagePrecision
     {
         int id, duree, ordre;
         string nom, description;
-        Module mod_id;
+        int testcontenue;
 
-        public Precision(int id, Module mod_id,string nom,string description,int duree,int ordre)
+
+
+        public Precision(int id, int testcontenue, string nom, string description, int duree, int ordre)
         {
-            this.id = id; this.mod_id = mod_id; this.nom = nom; this.description = description; this.duree = duree; this.ordre = ordre;
+            this.id = id; this.testcontenue = testcontenue; this.nom = nom; this.description = description; this.duree = duree; this.ordre = ordre;
         }
 
 
-        public Module Mod
-        {
-            get { return this.mod_id; }
-            set { this.mod_id = value; }
-        }
+       
         public string Description
         {
             get { return description; }
