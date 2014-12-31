@@ -30,7 +30,7 @@ namespace CompetencePlus.PackageStagiaires
                 pictureBox1.Image = Image.FromFile(s.ProfilImage);
                 Nom.Text = s.Nom;
                 prenom.Text = s.Prenom;
-                Groupe.Text = s.Groupe.Nom;
+                Filiere.Text = s.Filiere.Titre;
             }
             catch (Exception)
             {
@@ -46,7 +46,7 @@ namespace CompetencePlus.PackageStagiaires
                 pictureBox1.Image = Image.FromFile(s.ProfilImage);
                 Nom.Text = s.Nom;
                 prenom.Text = s.Prenom;
-                Groupe.Text = s.Groupe.Nom;
+                Filiere.Text = s.Filiere.Titre;
             }
             catch (Exception)
             {
@@ -62,7 +62,7 @@ namespace CompetencePlus.PackageStagiaires
                 pictureBox1.Image = Image.FromFile(s.ProfilImage);
                 Nom.Text = s.Nom;
                 prenom.Text = s.Prenom;
-                Groupe.Text = s.Groupe.Nom;
+                Filiere.Text = s.Filiere.Titre;
             }
             catch (Exception)
             {
@@ -78,7 +78,7 @@ namespace CompetencePlus.PackageStagiaires
                 pictureBox1.Image = Image.FromFile(s.ProfilImage);
                 Nom.Text = s.Nom;
                 prenom.Text = s.Prenom;
-                Groupe.Text = s.Groupe.Nom;
+                Filiere.Text = s.Filiere.Titre;
             }
             catch (Exception)
             {
@@ -114,7 +114,7 @@ namespace CompetencePlus.PackageStagiaires
                 pictureBox1.Image = Image.FromFile(x.ProfilImage);
                 Nom.Text = x.Nom;
                 prenom.Text = x.Prenom;
-                Groupe.Text = x.Groupe.Nom;
+                Filiere.Text = x.Filiere.Titre;
             }
             catch (Exception)
             {
@@ -131,10 +131,11 @@ namespace CompetencePlus.PackageStagiaires
                 pictureBox1.Image = Image.FromFile(s.ProfilImage);
                 Nom.Text = s.Nom;
                 prenom.Text = s.Prenom;
-                Groupe.Text = s.Groupe.Nom;
+                Filiere.Text = s.Filiere.Titre;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                MessageBox.Show(ex.Message);
             }
            
         }

@@ -18,6 +18,18 @@ namespace CompetencePlus.PackageStagiaires
         public void Actualiser() {
             stagiaireBindingSource.DataSource = null;
             stagiaireBindingSource.DataSource = new StagiaireBAO().Select();
+            try
+            {
+                Stagiaire s = (Stagiaire)stagiaireBindingSource.Current;
+                pictureBox1.Image = Image.FromFile(s.ProfilImage);
+                Nom.Text = s.Nom;
+                Prenom.Text = s.Prenom;
+                filiere1.Text = s.Filiere.Titre;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void FormGestionStagiaires_Load(object sender, EventArgs e)
@@ -40,6 +52,18 @@ namespace CompetencePlus.PackageStagiaires
                 Stagiaire s = (Stagiaire)stagiaireBindingSource.Current;
                 new StagiaireBAO().Delete(s.Id);
                 this.Actualiser();
+            }
+            try
+            {
+                Stagiaire s = (Stagiaire)stagiaireBindingSource.Current;
+                pictureBox1.Image = Image.FromFile(s.ProfilImage);
+                Nom.Text = s.Nom;
+                Prenom.Text = s.Prenom;
+                filiere1.Text = s.Filiere.Titre;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 

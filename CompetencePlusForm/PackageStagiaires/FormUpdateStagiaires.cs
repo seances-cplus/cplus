@@ -27,8 +27,6 @@ namespace CompetencePlus.PackageStagiaires
             PrenomTextBox.Text = s.Prenom;
             dateNaissanceDateTimePicker.Value = s.DateNaissance;
             CinTextBox.Text = s.Cin;
-            groupeComboBox.SelectedItem= s.Groupe;
-            FilierecomboBox.SelectedItem = s.Groupe.Filiere;
             emailTextBox.Text = s.Email;
             telephoneTextBox.Text = s.Telephone;
             adresseTextBox.Text = s.Adresse;
@@ -45,7 +43,7 @@ namespace CompetencePlus.PackageStagiaires
 
         private void FormUpdateStagiaires_Load(object sender, EventArgs e)
         {
-            groupeComboBox.DataSource = new GroupeBAO().Select();
+          
             FilierecomboBox.DataSource = new FiliereBAO().Select();
         }
 
@@ -62,7 +60,7 @@ namespace CompetencePlus.PackageStagiaires
                 s.Sexe = true;
             }
             else s.Sexe = false;
-            s.Groupe = new GroupeBAO().FindByName(groupeComboBox.Text);
+            s.Filiere = new FiliereBAO().FindByName(FilierecomboBox.Text);
             s.Email = emailTextBox.Text;
             s.Telephone = telephoneTextBox.Text;
             s.Adresse = adresseTextBox.Text;

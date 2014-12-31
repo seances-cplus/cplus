@@ -68,9 +68,9 @@ namespace CompetencePlus
 
         private void validationDesInscriptionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormStagiairesConfirmerInscription form = new FormStagiairesConfirmerInscription();
+            FormGestionInscription form = new FormGestionInscription();
 
-
+            form.Show();
 
         }
 

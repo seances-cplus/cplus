@@ -54,18 +54,21 @@ namespace CompetencePlus.PackageFilieres
             read.Read();
             Filiere f = new Filiere();
             f.Id = read.GetInt32(0);
-            f.Code = read.GetString(1);
-            f.Titre = read.GetString(2);
+            f.Code = read.GetString(2);
+            f.Titre = read.GetString(1);
+            f.Description = read.GetString(3);
             return f;
         }
         public Filiere FindByName(string Name)
         {
-            string Requete = "Select * from Filieres where Nom=" + Name;
+            string Requete = "Select * from Filieres where Titre='" + Name+"'";
             OleDbDataReader read = MyConnection.ExecuteReader(Requete);
+            read.Read();
             Filiere f = new Filiere();
             f.Id = read.GetInt32(0);
-            f.Code = read.GetString(1);
-            f.Titre = read.GetString(2);
+            f.Code = read.GetString(2);
+            f.Titre = read.GetString(1);
+            f.Description = read.GetString(3);
             return f;
         }
 

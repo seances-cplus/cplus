@@ -32,7 +32,6 @@
             System.Windows.Forms.Label emailLabel;
             System.Windows.Forms.Label telephoneLabel;
             System.Windows.Forms.Label Filierelabel;
-            System.Windows.Forms.Label groupeLabel;
             System.Windows.Forms.Label Cinlabel;
             System.Windows.Forms.Label dateNaissanceLabel;
             System.Windows.Forms.Label nomLabel;
@@ -48,7 +47,6 @@
             this.EmailLab = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.FiliereLab = new System.Windows.Forms.Label();
-            this.GroupeLab = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.CinLab = new System.Windows.Forms.Label();
             this.SexeLab = new System.Windows.Forms.Label();
@@ -60,7 +58,6 @@
             emailLabel = new System.Windows.Forms.Label();
             telephoneLabel = new System.Windows.Forms.Label();
             Filierelabel = new System.Windows.Forms.Label();
-            groupeLabel = new System.Windows.Forms.Label();
             Cinlabel = new System.Windows.Forms.Label();
             dateNaissanceLabel = new System.Windows.Forms.Label();
             nomLabel = new System.Windows.Forms.Label();
@@ -103,20 +100,11 @@
             // Filierelabel
             // 
             Filierelabel.AutoSize = true;
-            Filierelabel.Location = new System.Drawing.Point(27, 85);
+            Filierelabel.Location = new System.Drawing.Point(44, 65);
             Filierelabel.Name = "Filierelabel";
             Filierelabel.Size = new System.Drawing.Size(40, 13);
             Filierelabel.TabIndex = 2;
             Filierelabel.Text = "Filiere :";
-            // 
-            // groupeLabel
-            // 
-            groupeLabel.AutoSize = true;
-            groupeLabel.Location = new System.Drawing.Point(27, 32);
-            groupeLabel.Name = "groupeLabel";
-            groupeLabel.Size = new System.Drawing.Size(45, 13);
-            groupeLabel.TabIndex = 0;
-            groupeLabel.Text = "Groupe:";
             // 
             // Cinlabel
             // 
@@ -194,7 +182,7 @@
             this.label1.Size = new System.Drawing.Size(628, 13);
             this.label1.TabIndex = 8;
             this.label1.Text = "Si les informations entrer sont  correct appuiyer sur Confirmer pour continuer si" +
-    "non appuiyer sur annuler pour modifier ses informations";
+                "non appuiyer sur annuler pour modifier ses informations";
             // 
             // BtConfirmer
             // 
@@ -251,33 +239,22 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.FiliereLab);
-            this.groupBox2.Controls.Add(this.GroupeLab);
             this.groupBox2.Controls.Add(Filierelabel);
-            this.groupBox2.Controls.Add(groupeLabel);
             this.groupBox2.Location = new System.Drawing.Point(362, 43);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(357, 151);
             this.groupBox2.TabIndex = 10;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Filiere et groupe";
+            this.groupBox2.Text = "Filiere";
             // 
             // FiliereLab
             // 
             this.FiliereLab.AutoSize = true;
-            this.FiliereLab.Location = new System.Drawing.Point(123, 85);
+            this.FiliereLab.Location = new System.Drawing.Point(140, 65);
             this.FiliereLab.Name = "FiliereLab";
             this.FiliereLab.Size = new System.Drawing.Size(78, 13);
             this.FiliereLab.TabIndex = 21;
             this.FiliereLab.Text = "dateNaissance";
-            // 
-            // GroupeLab
-            // 
-            this.GroupeLab.AutoSize = true;
-            this.GroupeLab.Location = new System.Drawing.Point(123, 32);
-            this.GroupeLab.Name = "GroupeLab";
-            this.GroupeLab.Size = new System.Drawing.Size(78, 13);
-            this.GroupeLab.TabIndex = 20;
-            this.GroupeLab.Text = "dateNaissance";
             // 
             // groupBox1
             // 
@@ -390,7 +367,6 @@
         private System.Windows.Forms.Label EmailLab;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label FiliereLab;
-        private System.Windows.Forms.Label GroupeLab;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label CinLab;
         private System.Windows.Forms.Label SexeLab;

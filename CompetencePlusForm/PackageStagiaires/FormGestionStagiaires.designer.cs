@@ -33,9 +33,9 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.filiere1 = new System.Windows.Forms.Label();
+            this.Prenom = new System.Windows.Forms.Label();
+            this.Nom = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.BtResearch = new System.Windows.Forms.Button();
@@ -53,7 +53,7 @@
             this.stagiaireDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Filiere = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Update = new System.Windows.Forms.DataGridViewImageColumn();
             this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
             this.stagiaireBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -72,9 +72,9 @@
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.filiere1);
+            this.groupBox1.Controls.Add(this.Prenom);
+            this.groupBox1.Controls.Add(this.Nom);
             this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
@@ -110,32 +110,32 @@
             this.label4.TabIndex = 4;
             this.label4.Text = "label4";
             // 
-            // label3
+            // filiere1
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(106, 87);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(42, 13);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Groupe";
+            this.filiere1.AutoSize = true;
+            this.filiere1.Location = new System.Drawing.Point(106, 87);
+            this.filiere1.Name = "filiere1";
+            this.filiere1.Size = new System.Drawing.Size(34, 13);
+            this.filiere1.TabIndex = 3;
+            this.filiere1.Text = "Filiere";
             // 
-            // label2
+            // Prenom
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(106, 54);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Prenom";
+            this.Prenom.AutoSize = true;
+            this.Prenom.Location = new System.Drawing.Point(106, 54);
+            this.Prenom.Name = "Prenom";
+            this.Prenom.Size = new System.Drawing.Size(43, 13);
+            this.Prenom.TabIndex = 2;
+            this.Prenom.Text = "Prenom";
             // 
-            // label1
+            // Nom
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(106, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(29, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Nom";
+            this.Nom.AutoSize = true;
+            this.Nom.Location = new System.Drawing.Point(106, 19);
+            this.Nom.Name = "Nom";
+            this.Nom.Size = new System.Drawing.Size(29, 13);
+            this.Nom.TabIndex = 1;
+            this.Nom.Text = "Nom";
             // 
             // pictureBox1
             // 
@@ -272,7 +272,7 @@
             this.stagiaireDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn10,
+            this.Filiere,
             this.Update,
             this.Delete});
             this.stagiaireDataGridView.DataSource = this.stagiaireBindingSource;
@@ -294,11 +294,11 @@
             this.dataGridViewTextBoxColumn3.HeaderText = "Prenom";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             // 
-            // dataGridViewTextBoxColumn10
+            // Filiere
             // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "Groupe";
-            this.dataGridViewTextBoxColumn10.HeaderText = "Groupe";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.Filiere.DataPropertyName = "Filiere";
+            this.Filiere.HeaderText = "Filiere";
+            this.Filiere.Name = "Filiere";
             // 
             // Update
             // 
@@ -350,7 +350,7 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label Nom;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox NomTextBox;
@@ -358,16 +358,11 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.DataGridView stagiaireDataGridView;
         private System.Windows.Forms.BindingSource stagiaireBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
-        private System.Windows.Forms.DataGridViewImageColumn Update;
-        private System.Windows.Forms.DataGridViewImageColumn Delete;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label filiere1;
+        private System.Windows.Forms.Label Prenom;
         private System.Windows.Forms.Button BtResearch;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
@@ -377,5 +372,10 @@
         private System.Windows.Forms.ComboBox FiliereComboBox;
         private System.Windows.Forms.BindingSource filiereBindingSource;
         private System.Windows.Forms.BindingSource groupeBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Filiere;
+        private System.Windows.Forms.DataGridViewImageColumn Update;
+        private System.Windows.Forms.DataGridViewImageColumn Delete;
     }
 }

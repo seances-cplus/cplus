@@ -33,7 +33,6 @@
             System.Windows.Forms.Label emailLabel;
             System.Windows.Forms.Label telephoneLabel;
             System.Windows.Forms.Label Filierelabel;
-            System.Windows.Forms.Label groupeLabel;
             System.Windows.Forms.Label Cinlabel;
             System.Windows.Forms.Label dateNaissanceLabel;
             System.Windows.Forms.Label nomLabel;
@@ -47,7 +46,6 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.FilierecomboBox = new System.Windows.Forms.ComboBox();
             this.filiereBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.groupeComboBox = new System.Windows.Forms.ComboBox();
             this.groupeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.SexeRadioButton2 = new System.Windows.Forms.RadioButton();
@@ -63,7 +61,6 @@
             emailLabel = new System.Windows.Forms.Label();
             telephoneLabel = new System.Windows.Forms.Label();
             Filierelabel = new System.Windows.Forms.Label();
-            groupeLabel = new System.Windows.Forms.Label();
             Cinlabel = new System.Windows.Forms.Label();
             dateNaissanceLabel = new System.Windows.Forms.Label();
             nomLabel = new System.Windows.Forms.Label();
@@ -107,20 +104,11 @@
             // Filierelabel
             // 
             Filierelabel.AutoSize = true;
-            Filierelabel.Location = new System.Drawing.Point(27, 85);
+            Filierelabel.Location = new System.Drawing.Point(27, 50);
             Filierelabel.Name = "Filierelabel";
             Filierelabel.Size = new System.Drawing.Size(40, 13);
             Filierelabel.TabIndex = 2;
             Filierelabel.Text = "Filiere :";
-            // 
-            // groupeLabel
-            // 
-            groupeLabel.AutoSize = true;
-            groupeLabel.Location = new System.Drawing.Point(27, 32);
-            groupeLabel.Name = "groupeLabel";
-            groupeLabel.Size = new System.Drawing.Size(45, 13);
-            groupeLabel.TabIndex = 0;
-            groupeLabel.Text = "Groupe:";
             // 
             // Cinlabel
             // 
@@ -185,9 +173,9 @@
             this.groupBox3.Controls.Add(emailLabel);
             this.groupBox3.Controls.Add(this.telephoneTextBox);
             this.groupBox3.Controls.Add(telephoneLabel);
-            this.groupBox3.Location = new System.Drawing.Point(362, 215);
+            this.groupBox3.Location = new System.Drawing.Point(362, 178);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(357, 157);
+            this.groupBox3.Size = new System.Drawing.Size(362, 194);
             this.groupBox3.TabIndex = 9;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Cordonnée";
@@ -202,8 +190,9 @@
             // adresseTextBox
             // 
             this.adresseTextBox.Location = new System.Drawing.Point(120, 112);
+            this.adresseTextBox.Multiline = true;
             this.adresseTextBox.Name = "adresseTextBox";
-            this.adresseTextBox.Size = new System.Drawing.Size(170, 20);
+            this.adresseTextBox.Size = new System.Drawing.Size(231, 76);
             this.adresseTextBox.TabIndex = 3;
             // 
             // telephoneTextBox
@@ -217,21 +206,19 @@
             // 
             this.groupBox2.Controls.Add(Filierelabel);
             this.groupBox2.Controls.Add(this.FilierecomboBox);
-            this.groupBox2.Controls.Add(groupeLabel);
-            this.groupBox2.Controls.Add(this.groupeComboBox);
             this.groupBox2.Location = new System.Drawing.Point(362, 54);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(357, 151);
+            this.groupBox2.Size = new System.Drawing.Size(362, 116);
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Filiere et groupe";
+            this.groupBox2.Text = "Filiere";
             // 
             // FilierecomboBox
             // 
             this.FilierecomboBox.DataSource = this.filiereBindingSource;
             this.FilierecomboBox.DisplayMember = "Titre";
             this.FilierecomboBox.FormattingEnabled = true;
-            this.FilierecomboBox.Location = new System.Drawing.Point(120, 82);
+            this.FilierecomboBox.Location = new System.Drawing.Point(120, 47);
             this.FilierecomboBox.Name = "FilierecomboBox";
             this.FilierecomboBox.Size = new System.Drawing.Size(154, 21);
             this.FilierecomboBox.TabIndex = 3;
@@ -240,17 +227,6 @@
             // filiereBindingSource
             // 
             this.filiereBindingSource.DataSource = typeof(CompetencePlus.PackageFilieres.Filiere);
-            // 
-            // groupeComboBox
-            // 
-            this.groupeComboBox.DataSource = this.groupeBindingSource;
-            this.groupeComboBox.DisplayMember = "Nom";
-            this.groupeComboBox.FormattingEnabled = true;
-            this.groupeComboBox.Location = new System.Drawing.Point(120, 29);
-            this.groupeComboBox.Name = "groupeComboBox";
-            this.groupeComboBox.Size = new System.Drawing.Size(154, 21);
-            this.groupeComboBox.TabIndex = 1;
-            this.groupeComboBox.ValueMember = "Id";
             // 
             // groupeBindingSource
             // 
@@ -384,7 +360,6 @@
         private System.Windows.Forms.TextBox telephoneTextBox;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.ComboBox FilierecomboBox;
-        private System.Windows.Forms.ComboBox groupeComboBox;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton SexeRadioButton2;
         private System.Windows.Forms.TextBox CinTextBox;

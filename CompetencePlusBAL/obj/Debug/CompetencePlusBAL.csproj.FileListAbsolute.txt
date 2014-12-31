@@ -26,13 +26,6 @@ C:\Users\ESSARRAJ\Documents\GitHub\prototype-winform\PrototypeAppCompetencePlus\
 C:\Users\ESSARRAJ\Documents\GitHub\prototype-winform\PrototypeAppCompetencePlus\CompetencePlusBAL\obj\Debug\CompetencePlusBAL.csprojResolveAssemblyReference.cache
 C:\Users\ESSARRAJ\Documents\GitHub\prototype-winform\PrototypeAppCompetencePlus\CompetencePlusBAL\obj\Debug\CompetencePlusBAL.dll
 C:\Users\ESSARRAJ\Documents\GitHub\prototype-winform\PrototypeAppCompetencePlus\CompetencePlusBAL\obj\Debug\CompetencePlusBAL.pdb
-C:\Users\Abdellah\Documents\GitHub\cplus\CompetencePlusBAL\bin\Debug\CompetencePlusBAL.dll
-C:\Users\Abdellah\Documents\GitHub\cplus\CompetencePlusBAL\bin\Debug\CompetencePlusBAL.pdb
-C:\Users\Abdellah\Documents\GitHub\cplus\CompetencePlusBAL\bin\Debug\CompetencePlusDAL.dll
-C:\Users\Abdellah\Documents\GitHub\cplus\CompetencePlusBAL\bin\Debug\CompetencePlusDAL.pdb
-C:\Users\Abdellah\Documents\GitHub\cplus\CompetencePlusBAL\obj\Debug\CompetencePlusBAL.csprojResolveAssemblyReference.cache
-C:\Users\Abdellah\Documents\GitHub\cplus\CompetencePlusBAL\obj\Debug\CompetencePlusBAL.dll
-C:\Users\Abdellah\Documents\GitHub\cplus\CompetencePlusBAL\obj\Debug\CompetencePlusBAL.pdb
 C:\Users\ESSARRAJ\Documents\GitHub\cplus\CompetencePlusBAL\bin\Debug\CompetencePlusBAL.dll
 C:\Users\ESSARRAJ\Documents\GitHub\cplus\CompetencePlusBAL\bin\Debug\CompetencePlusBAL.pdb
 C:\Users\ESSARRAJ\Documents\GitHub\cplus\CompetencePlusBAL\bin\Debug\CompetencePlusDAL.dll
@@ -61,3 +54,10 @@ C:\Users\Zbaaakh\Desktop\NotesCplus\cplus\CompetencePlusBAL\bin\Debug\Competence
 C:\Users\Zbaaakh\Desktop\NotesCplus\cplus\CompetencePlusBAL\obj\Debug\CompetencePlusBAL.csprojResolveAssemblyReference.cache
 C:\Users\Zbaaakh\Desktop\NotesCplus\cplus\CompetencePlusBAL\obj\Debug\CompetencePlusBAL.dll
 C:\Users\Zbaaakh\Desktop\NotesCplus\cplus\CompetencePlusBAL\obj\Debug\CompetencePlusBAL.pdb
+C:\Users\Abdellah\Documents\GitHub\cplus\CompetencePlusBAL\bin\Debug\CompetencePlusBAL.dll
+C:\Users\Abdellah\Documents\GitHub\cplus\CompetencePlusBAL\bin\Debug\CompetencePlusBAL.pdb
+C:\Users\Abdellah\Documents\GitHub\cplus\CompetencePlusBAL\bin\Debug\CompetencePlusDAL.dll
+C:\Users\Abdellah\Documents\GitHub\cplus\CompetencePlusBAL\bin\Debug\CompetencePlusDAL.pdb
+C:\Users\Abdellah\Documents\GitHub\cplus\CompetencePlusBAL\obj\Debug\CompetencePlusBAL.csprojResolveAssemblyReference.cache
+C:\Users\Abdellah\Documents\GitHub\cplus\CompetencePlusBAL\obj\Debug\CompetencePlusBAL.dll
+C:\Users\Abdellah\Documents\GitHub\cplus\CompetencePlusBAL\obj\Debug\CompetencePlusBAL.pdb
