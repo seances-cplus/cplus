@@ -18,20 +18,24 @@ namespace CompetencePlus.PackageStagiaires
             InitializeComponent();
         }
         string Url;
-        public void Update(string Url, string nom, string Prenom, string dateNaissance, string Sexe, string Cin, Groupe g, Filiere f, string Email, string Telephone, string Adresse)
+        public void Update(Stagiaire s)
         {
-            pictureBox1.Image = Image.FromFile(Url);
-            NomLab.Text = nom;
-            PrenomLab.Text = Prenom;
-            DateNaissanceLab.Text = dateNaissance;
-            SexeLab.Text = Sexe;
-            CinLab.Text = Cin;
-            GroupeLab.Text = g.Nom;
-            FiliereLab.Text = f.Titre;
-            EmailLab.Text = Email;
-            TelephoneLab.Text = Telephone;
-            AdresseLab.Text = Adresse;
-            this.Url = Url;
+            pictureBox1.Image = Image.FromFile(s.ProfilImage);
+            NomLab.Text = s.Nom;
+            PrenomLab.Text = s.Prenom;
+            DateNaissanceLab.Text = s.DateNaissance.ToString();
+            if (s.Sexe)
+            {
+                SexeLab.Text = "Male";
+            }
+            else SexeLab.Text = "Femalle";
+            
+            CinLab.Text = s.Cin;
+            FiliereLab.Text = s.Filiere.Titre;
+            EmailLab.Text = s.Email;
+            TelephoneLab.Text = s.Telephone;
+            AdresseLab.Text = s.Adresse;
+            this.Url = s.ProfilImage;
 
         }
         public FormStagiairesInscription Formu { get; set; }
@@ -53,7 +57,7 @@ namespace CompetencePlus.PackageStagiaires
             }
             else s.Sexe = false;
             s.Cin = CinLab.Text;
-            s.Groupe = new GroupeBAO().FindByName(GroupeLab.Text);
+            s.Filiere = new FiliereBAO().FindByName(FiliereLab.Text);
             s.Email = EmailLab.Text;
             s.Telephone = TelephoneLab.Text;
             s.Adresse = AdresseLab.Text;

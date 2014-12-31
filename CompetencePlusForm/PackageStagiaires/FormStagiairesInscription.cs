@@ -28,23 +28,29 @@ namespace CompetencePlus.PackageStagiaires
 
         private void FormStagiairesInscription_Load(object sender, EventArgs e)
         {
-            groupeComboBox.DataSource = new GroupeBAO().Select();
             FilierecomboBox.DataSource = new FiliereBAO().Select();
         }
 
         private void BtValide_Click_1(object sender, EventArgs e)
         {
-            string sexe;
+            Stagiaire s = new Stagiaire();
+            s.Nom = nomTextBox.Text;
+            s.Prenom = PrenomTextBox.Text;
+            s.ProfilImage = Url;
+            s.Telephone = telephoneTextBox.Text;
             if (sexeRadioButton.Checked)
             {
-                sexe = "Male";
+                s.Sexe = true;
             }
-            else sexe = "Femelle";
+            else s.Sexe = false;
+            s.Cin = CinTextBox.Text;
+            s.DateNaissance = dateNaissanceDateTimePicker.Value;
+            s.Email = emailTextBox.Text;
+            s.Adresse = adresseTextBox.Text;
+            s.Filiere =(Filiere)FilierecomboBox.SelectedItem;
 
             FormStagiairesConfirmerInscription f = new FormStagiairesConfirmerInscription();
-            f.Update(Url, nomTextBox.Text, PrenomTextBox.Text, dateNaissanceDateTimePicker.Value.ToString(),
-                sexe, CinTextBox.Text, (Groupe)groupeComboBox.SelectedItem, (Filiere)FilierecomboBox.SelectedItem,
-                emailTextBox.Text, telephoneTextBox.Text, adresseTextBox.Text);
+            f.Update(s);
             f.Formu = this;
             f.Show();
             this.Hide();

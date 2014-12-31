@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using CompetencePlus.PackageGroupes;
+using CompetencePlus.PackageFilieres;
 
 
 namespace CompetencePlus.PackageStagiaires
@@ -81,12 +82,13 @@ namespace CompetencePlus.PackageStagiaires
             get { return profilImage; }
             set { profilImage = value; }
         }
-        private Groupe groupe;
 
-        public Groupe Groupe
+        Filiere filiere;
+
+        public Filiere Filiere
         {
-            get { return groupe; }
-            set { groupe = value; }
+            get { return filiere; }
+            set { filiere = value; }
         }
         private int etat;
 

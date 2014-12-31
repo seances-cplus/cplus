@@ -34,26 +34,26 @@
             this.PriviousRow = new System.Windows.Forms.Button();
             this.FirstRow = new System.Windows.Forms.Button();
             this.Stagiaire = new System.Windows.Forms.GroupBox();
-            this.Groupe = new System.Windows.Forms.Label();
+            this.Filiere = new System.Windows.Forms.Label();
             this.prenom = new System.Windows.Forms.Label();
             this.Nom = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.stagiaireDataGridView = new System.Windows.Forms.DataGridView();
+            this.stagiaireBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn3 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.stagiaireBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Confirm = new System.Windows.Forms.DataGridViewImageColumn();
             this.Update = new System.Windows.Forms.DataGridViewImageColumn();
             this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
             this.Stagiaire.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.stagiaireDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stagiaireBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -99,7 +99,7 @@
             // 
             // Stagiaire
             // 
-            this.Stagiaire.Controls.Add(this.Groupe);
+            this.Stagiaire.Controls.Add(this.Filiere);
             this.Stagiaire.Controls.Add(this.prenom);
             this.Stagiaire.Controls.Add(this.Nom);
             this.Stagiaire.Controls.Add(this.pictureBox1);
@@ -110,14 +110,14 @@
             this.Stagiaire.TabStop = false;
             this.Stagiaire.Text = "Stagiaire";
             // 
-            // Groupe
+            // Filiere
             // 
-            this.Groupe.AutoSize = true;
-            this.Groupe.Location = new System.Drawing.Point(187, 119);
-            this.Groupe.Name = "Groupe";
-            this.Groupe.Size = new System.Drawing.Size(42, 13);
-            this.Groupe.TabIndex = 3;
-            this.Groupe.Text = "Groupe";
+            this.Filiere.AutoSize = true;
+            this.Filiere.Location = new System.Drawing.Point(187, 119);
+            this.Filiere.Name = "Filiere";
+            this.Filiere.Size = new System.Drawing.Size(34, 13);
+            this.Filiere.TabIndex = 3;
+            this.Filiere.Text = "Filiere";
             // 
             // prenom
             // 
@@ -137,6 +137,15 @@
             this.Nom.TabIndex = 1;
             this.Nom.Text = "Nom";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(38, 48);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(74, 84);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.stagiaireDataGridView);
@@ -154,7 +163,7 @@
             this.stagiaireDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewTextBoxColumn1,
             this.Confirm,
             this.Update,
             this.Delete});
@@ -164,6 +173,10 @@
             this.stagiaireDataGridView.Size = new System.Drawing.Size(493, 220);
             this.stagiaireDataGridView.TabIndex = 0;
             this.stagiaireDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.stagiaireDataGridView_CellClick);
+            // 
+            // stagiaireBindingSource
+            // 
+            this.stagiaireBindingSource.DataSource = typeof(CompetencePlus.PackageStagiaires.Stagiaire);
             // 
             // dataGridViewImageColumn1
             // 
@@ -186,19 +199,6 @@
             this.dataGridViewImageColumn3.Name = "dataGridViewImageColumn3";
             this.dataGridViewImageColumn3.Width = 50;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(38, 48);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(74, 84);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // stagiaireBindingSource
-            // 
-            this.stagiaireBindingSource.DataSource = typeof(CompetencePlus.PackageStagiaires.Stagiaire);
-            // 
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.DataPropertyName = "Nom";
@@ -211,11 +211,11 @@
             this.dataGridViewTextBoxColumn3.HeaderText = "Prenom";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             // 
-            // dataGridViewTextBoxColumn10
+            // dataGridViewTextBoxColumn1
             // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "Groupe";
-            this.dataGridViewTextBoxColumn10.HeaderText = "Groupe";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Filiere";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Filiere";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             // 
             // Confirm
             // 
@@ -257,9 +257,9 @@
             this.Load += new System.EventHandler(this.FormGestionInscription_Load);
             this.Stagiaire.ResumeLayout(false);
             this.Stagiaire.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.stagiaireDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.stagiaireBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -272,21 +272,21 @@
         private System.Windows.Forms.Button PriviousRow;
         private System.Windows.Forms.Button FirstRow;
         private System.Windows.Forms.GroupBox Stagiaire;
-        private System.Windows.Forms.Label Groupe;
+        private System.Windows.Forms.Label Filiere;
         private System.Windows.Forms.Label prenom;
         private System.Windows.Forms.Label Nom;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView stagiaireDataGridView;
         private System.Windows.Forms.BindingSource stagiaireBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
-        private System.Windows.Forms.DataGridViewImageColumn Confirm;
-        private System.Windows.Forms.DataGridViewImageColumn Update;
-        private System.Windows.Forms.DataGridViewImageColumn Delete;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewImageColumn Confirm;
+        private System.Windows.Forms.DataGridViewImageColumn Update;
+        private System.Windows.Forms.DataGridViewImageColumn Delete;
     }
 }
