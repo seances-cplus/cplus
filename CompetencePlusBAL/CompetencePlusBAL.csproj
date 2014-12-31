@@ -49,7 +49,9 @@
     <Compile Include="PackageFormations\Class1.cs" />
     <Compile Include="PackageGroupes\GroupeBAO.cs" />
     <Compile Include="PackageModules\Class1.cs" />
+    <Compile Include="PackageModules\ModuleBAO.cs" />
     <Compile Include="PackageNotes\Class1.cs" />
+    <Compile Include="PackagePrecision\PrecisionBAO.cs" />
     <Compile Include="PackagePrevisionSeances\Class1.cs" />
     <Compile Include="PackageSeances\Class1.cs" />
     <Compile Include="PackageStagiaires\StagiaireBAO.cs" />

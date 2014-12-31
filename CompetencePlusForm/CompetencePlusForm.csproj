@@ -101,7 +101,25 @@
       <DependentUpon>FormUpdateGroupe.cs</DependentUpon>
     </Compile>
     <Compile Include="PackageModules\Class2.cs" />
+    <Compile Include="PackageModules\FormeGestionModules.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PackageModules\FormeGestionModules.designer.cs">
+      <DependentUpon>FormeGestionModules.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PackageModules\FormeModule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PackageModules\FormeModule.designer.cs">
+      <DependentUpon>FormeModule.cs</DependentUpon>
+    </Compile>
     <Compile Include="PackageNotes\Class2.cs" />
+    <Compile Include="PackagePrecision\FormeGestionPrecision.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PackagePrecision\FormeGestionPrecision.designer.cs">
+      <DependentUpon>FormeGestionPrecision.cs</DependentUpon>
+    </Compile>
     <Compile Include="PackagePrevisionSeances\Class2.cs" />
     <Compile Include="PackageSeances\Class2.cs" />
     <Compile Include="PackageStagiaires\FormGestionInscription.cs">
@@ -163,6 +181,15 @@
     <EmbeddedResource Include="PackageGroupes\FormUpdateGroupe.resx">
       <DependentUpon>FormUpdateGroupe.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PackageModules\FormeGestionModules.resx">
+      <DependentUpon>FormeGestionModules.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PackageModules\FormeModule.resx">
+      <DependentUpon>FormeModule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PackagePrecision\FormeGestionPrecision.resx">
+      <DependentUpon>FormeGestionPrecision.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PackageStagiaires\FormGestionInscription.resx">
       <DependentUpon>FormGestionInscription.cs</DependentUpon>
     </EmbeddedResource>
@@ -191,6 +218,7 @@
     <None Include="Properties\DataSources\CompetencePlus.PackageDB.IncrementationDB.datasource" />
     <None Include="Properties\DataSources\CompetencePlus.PackageFilieres.Filiere.datasource" />
     <None Include="Properties\DataSources\CompetencePlus.PackageGroupes.Groupe.datasource" />
+    <None Include="Properties\DataSources\CompetencePlus.PackageModules.Module.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

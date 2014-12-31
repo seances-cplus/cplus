@@ -232,6 +232,7 @@
             // 
             this.modulesToolStripMenuItem2.Name = "modulesToolStripMenuItem2";
             resources.ApplyResources(this.modulesToolStripMenuItem2, "modulesToolStripMenuItem2");
+            this.modulesToolStripMenuItem2.Click += new System.EventHandler(this.modulesToolStripMenuItem2_Click);
             // 
             // précisionsToolStripMenuItem1
             // 

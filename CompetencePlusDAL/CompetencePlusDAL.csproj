@@ -52,7 +52,10 @@
     <Compile Include="PackageGroupes\Groupe.cs" />
     <Compile Include="PackageGroupes\GroupeDAO.cs" />
     <Compile Include="PackageModules\Module.cs" />
+    <Compile Include="PackageModules\ModuleDAO.cs" />
     <Compile Include="PackageNotes\Note.cs" />
+    <Compile Include="PackagePrecision\Precision.cs" />
+    <Compile Include="PackagePrecision\PrecisionDAO.cs" />
     <Compile Include="PackagePrevisionSeances\PrevisionSeance.cs" />
     <Compile Include="PackageSeances\Seance.cs" />
     <Compile Include="PackageStagiaires\Stagiaire.cs" />
