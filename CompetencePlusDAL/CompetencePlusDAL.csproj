@@ -48,6 +48,7 @@
     <Compile Include="PackageFilieres\Filiere.cs" />
     <Compile Include="PackageFilieres\FiliereDAO.cs" />
     <Compile Include="PackageFormateurs\Formateur.cs" />
+    <Compile Include="PackageFormateurs\FormateurDAO.cs" />
     <Compile Include="PackageFormations\Formation.cs" />
     <Compile Include="PackageGroupes\Groupe.cs" />
     <Compile Include="PackageGroupes\GroupeDAO.cs" />

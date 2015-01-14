@@ -12,6 +12,7 @@ using CompetencePlus.PackageGroupes;
 using CompetencePlus.PackageDB;
 using CompetencePlus.Tools;
 using CompetencePlus.PackageModules;
+using CompetencePlus.PackageFormateurs;
 
 namespace CompetencePlus
 {
@@ -108,6 +109,12 @@ namespace CompetencePlus
         {
             FormeGestionModules fr = new FormeGestionModules();
             fr.Show();
+        }
+
+        private void formateursToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormGestionFormateur f = new FormGestionFormateur();
+            f.Show();
         }
     }
 }

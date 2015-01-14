@@ -46,6 +46,7 @@
     <Compile Include="PackageEmploisTemps\Class1.cs" />
     <Compile Include="PackageFilieres\FiliereBAO.cs" />
     <Compile Include="PackageFormateurs\Class1.cs" />
+    <Compile Include="PackageFormateurs\FormateurBAO.cs" />
     <Compile Include="PackageFormations\Class1.cs" />
     <Compile Include="PackageGroupes\GroupeBAO.cs" />
     <Compile Include="PackageModules\Class1.cs" />

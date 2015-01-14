@@ -65,6 +65,7 @@
             this.compétenceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.niveauxDesCompétencesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataBaseManagementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.formateursToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -77,7 +78,8 @@
             this.formationsToolStripMenuItem,
             this.pédagogieToolStripMenuItem,
             this.gestionDinformationToolStripMenuItem,
-            this.dataBaseManagementToolStripMenuItem});
+            this.dataBaseManagementToolStripMenuItem,
+            this.formateursToolStripMenuItem});
             resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -305,6 +307,12 @@
             resources.ApplyResources(this.dataBaseManagementToolStripMenuItem, "dataBaseManagementToolStripMenuItem");
             this.dataBaseManagementToolStripMenuItem.Click += new System.EventHandler(this.dataBaseManagementToolStripMenuItem_Click);
             // 
+            // formateursToolStripMenuItem
+            // 
+            this.formateursToolStripMenuItem.Name = "formateursToolStripMenuItem";
+            resources.ApplyResources(this.formateursToolStripMenuItem, "formateursToolStripMenuItem");
+            this.formateursToolStripMenuItem.Click += new System.EventHandler(this.formateursToolStripMenuItem_Click);
+            // 
             // MenuApplication
             // 
             resources.ApplyResources(this, "$this");
@@ -362,5 +370,6 @@
         private System.Windows.Forms.ToolStripMenuItem compétenceToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem niveauxDesCompétencesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dataBaseManagementToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem formateursToolStripMenuItem;
     }
 }

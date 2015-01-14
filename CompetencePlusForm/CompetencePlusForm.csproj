@@ -80,6 +80,24 @@
       <DependentUpon>FormUpdateFiliere.cs</DependentUpon>
     </Compile>
     <Compile Include="PackageFormateurs\Class2.cs" />
+    <Compile Include="PackageFormateurs\FormFormateur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PackageFormateurs\FormFormateur.Designer.cs">
+      <DependentUpon>FormFormateur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PackageFormateurs\FormGestionFormateur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PackageFormateurs\FormGestionFormateur.Designer.cs">
+      <DependentUpon>FormGestionFormateur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PackageFormateurs\FormUpdateFormateur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PackageFormateurs\FormUpdateFormateur.Designer.cs">
+      <DependentUpon>FormUpdateFormateur.cs</DependentUpon>
+    </Compile>
     <Compile Include="PackageFormations\Class2.cs" />
     <Compile Include="PackageGroupes\Class1.cs" />
     <Compile Include="PackageGroupes\FormGestionGroupes.cs">
@@ -171,6 +189,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PackageFilieres\FormUpdateFiliere.resx">
       <DependentUpon>FormUpdateFiliere.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PackageFormateurs\FormFormateur.resx">
+      <DependentUpon>FormFormateur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PackageFormateurs\FormGestionFormateur.resx">
+      <DependentUpon>FormGestionFormateur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PackageFormateurs\FormUpdateFormateur.resx">
+      <DependentUpon>FormUpdateFormateur.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PackageGroupes\FormGestionGroupes.resx">
       <DependentUpon>FormGestionGroupes.cs</DependentUpon>
