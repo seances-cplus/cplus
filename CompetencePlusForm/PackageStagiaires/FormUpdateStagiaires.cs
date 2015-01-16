@@ -22,7 +22,11 @@ namespace CompetencePlus.PackageStagiaires
         public void Update(Stagiaire s) {
             id = s.Id;
             Url = s.ProfilImage;
-            pictureBox1.Image = Image.FromFile(s.ProfilImage);
+            if (!string.IsNullOrEmpty(s.ProfilImage))
+            {
+                pictureBox1.Image = Image.FromFile(s.ProfilImage);
+            }
+           
             nomTextBox.Text = s.Nom;
             PrenomTextBox.Text = s.Prenom;
             dateNaissanceDateTimePicker.Value = s.DateNaissance;
@@ -30,7 +34,7 @@ namespace CompetencePlus.PackageStagiaires
             emailTextBox.Text = s.Email;
             telephoneTextBox.Text = s.Telephone;
             adresseTextBox.Text = s.Adresse;
-            if (s.Sexe == true)
+            if (s.Sexe == 1)
             {
                 sexeRadioButton.Checked = true;
             }
@@ -50,6 +54,7 @@ namespace CompetencePlus.PackageStagiaires
         private void BtValide_Click(object sender, EventArgs e)
         {
             Stagiaire s = new Stagiaire();
+           
             s.Id = id;
             s.Nom = nomTextBox.Text;
             s.Prenom = PrenomTextBox.Text;
@@ -57,15 +62,17 @@ namespace CompetencePlus.PackageStagiaires
             s.Cin = CinTextBox.Text;
             if (sexeRadioButton.Checked == true)
             {
-                s.Sexe = true;
+                s.Sexe = 1;
             }
-            else s.Sexe = false;
+            else s.Sexe = 0;
             s.Filiere = new FiliereBAO().FindByName(FilierecomboBox.Text);
             s.Email = emailTextBox.Text;
             s.Telephone = telephoneTextBox.Text;
             s.Adresse = adresseTextBox.Text;
             s.Etat = 0;
             s.ProfilImage = @Url;
+            MessageBox.Show(s.Id+"  "+s.Nom+"  "+s.Prenom+"  "+s.ProfilImage+"  "+s.Sexe+"  "+s.Telephone+"  "+s.Adresse+" "+s.Filiere.Id);
+            MessageBox.Show(s.Email+"  "+s.Cin+"  "+s.DateNaissance);
             new StagiaireBAO().Update(s);
             this.Dispose();
         }

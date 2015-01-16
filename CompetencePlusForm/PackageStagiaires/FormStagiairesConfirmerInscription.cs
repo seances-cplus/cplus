@@ -24,7 +24,7 @@ namespace CompetencePlus.PackageStagiaires
             NomLab.Text = s.Nom;
             PrenomLab.Text = s.Prenom;
             DateNaissanceLab.Text = s.DateNaissance.ToString();
-            if (s.Sexe)
+            if (s.Sexe==1)
             {
                 SexeLab.Text = "Male";
             }
@@ -53,9 +53,9 @@ namespace CompetencePlus.PackageStagiaires
             s.DateNaissance = DateTime.Parse(DateNaissanceLab.Text);
             if (SexeLab.Text == "Male")
             {
-                s.Sexe = true;
+                s.Sexe = 1;
             }
-            else s.Sexe = false;
+            else s.Sexe = 0;
             s.Cin = CinLab.Text;
             s.Filiere = new FiliereBAO().FindByName(FiliereLab.Text);
             s.Email = EmailLab.Text;

@@ -13,13 +13,13 @@ namespace CompetencePlus.PackageGroupes
     {
         public  void Add(Groupe g)
         {
-            string Requete = "Insert into Groupes(Nom,Code,Description,idFiliere) values ('" +g.Nom  + "','" +g.Code+ "','" + g.Description +"',"+g.Filiere.Id +")";
+            string Requete = "Insert into Groupes(Nom,Code,Description,Filiere_id) values ('" + g.Nom + "','" + g.Code + "','" + g.Description + "'," + g.Filiere.Id + ")";
             MyConnection.ExecuteNonQuery(Requete);
         }
 
         public  void Update(Groupe g)
         {
-            string Requete = "Update Filieres set Code ='" + g.Code + "',Nom ='" + g.Nom +"',Description='"+g.Description+"',IdFiliere="+g.Filiere.Id+" where id =" + g.Id;
+            string Requete = "Update Filieres set Code ='" + g.Code + "',Nom ='" + g.Nom + "',Description='" + g.Description + "',Filiere_id=" + g.Filiere.Id + " where id =" + g.Id;
             MyConnection.ExecuteNonQuery(Requete);
         }
 
@@ -104,7 +104,7 @@ namespace CompetencePlus.PackageGroupes
             if (g.Filiere.Titre != "")
             {
                 if (and) Requete += " and ";
-                Requete += " IdFiliere like '%" + g.Filiere.Id + "%'";
+                Requete += " Filiere_id like '%" + g.Filiere.Id + "%'";
                 and = true;
             }
 

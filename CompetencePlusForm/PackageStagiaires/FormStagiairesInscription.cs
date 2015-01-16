@@ -40,9 +40,9 @@ namespace CompetencePlus.PackageStagiaires
             s.Telephone = telephoneTextBox.Text;
             if (sexeRadioButton.Checked)
             {
-                s.Sexe = true;
+                s.Sexe = 1;
             }
-            else s.Sexe = false;
+            else s.Sexe = 0;
             s.Cin = CinTextBox.Text;
             s.DateNaissance = dateNaissanceDateTimePicker.Value;
             s.Email = emailTextBox.Text;

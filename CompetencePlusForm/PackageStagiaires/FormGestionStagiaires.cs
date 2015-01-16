@@ -53,17 +53,19 @@ namespace CompetencePlus.PackageStagiaires
                 new StagiaireBAO().Delete(s.Id);
                 this.Actualiser();
             }
+            Stagiaire x = (Stagiaire)stagiaireBindingSource.Current;
             try
             {
-                Stagiaire s = (Stagiaire)stagiaireBindingSource.Current;
-                pictureBox1.Image = Image.FromFile(s.ProfilImage);
-                Nom.Text = s.Nom;
-                Prenom.Text = s.Prenom;
-                filiere1.Text = s.Filiere.Titre;
+               
+                pictureBox1.Image = Image.FromFile(x.ProfilImage);
+               Nom.Text = x.Nom;
+                Prenom.Text = x.Prenom;
+                filiere1.Text = x.Filiere.Titre;
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+               // MessageBox.Show(ex.Message);
+              
             }
         }
 

@@ -7,6 +7,7 @@ using CompetencePlus.Outils;
 using CompetencePlus.PackageFilieres;
 using CompetencePlus.Tools;
 
+
 namespace CompetencePlus.PackageStagiaires
 {
     public class StagiaireDAO : IGestion<Stagiaire>
@@ -14,7 +15,7 @@ namespace CompetencePlus.PackageStagiaires
         public  void Add(Stagiaire s)
         {
             string Requete = "insert into stagiaires(Nom,Prenom,DateNaissance,sexe,Cin,Email,Telephone,Adress,ProfilImage,Etat,Filiere_id) values ('" +
-                s.Nom + "','" + s.Prenom + "','" + s.DateNaissance + "'," + 1 + ",'" + s.Cin + "','" + s.Email + "','" + s.Telephone + "','" + s.Adresse + "','" +
+                s.Nom + "','" + s.Prenom + "','" + s.DateNaissance + "'," + s.Sexe + ",'" + s.Cin + "','" + s.Email + "','" + s.Telephone + "','" + s.Adresse + "','" +
                 s.ProfilImage + "'," + s.Etat +","+s.Filiere.Id+")";
  
             MyConnection.ExecuteNonQuery(Requete);
@@ -22,7 +23,7 @@ namespace CompetencePlus.PackageStagiaires
         public void Update(Stagiaire s)
         {
             String Requete = "Update Stagiaires set Nom='"+s.Nom+"',Prenom='"+s.Prenom+"',DateNaissance='"+s.DateNaissance+"',Sexe="+s.Sexe+
-                ",Cin='"+s.Cin+"',Email='"+s.Email+"',Telephone ='"+s.Telephone+"',Adresse='"+s.Adresse+"',Images = '"+s.ProfilImage+"',Filiere_id="+s.Filiere.Id+" where id="+s.Id;
+                ",Cin='" + s.Cin + "',Email='" + s.Email + "',Telephone ='" + s.Telephone + "',Adress='" + s.Adresse + "',profilImage = '" + s.ProfilImage + "',Filiere_id=" + s.Filiere.Id + " where id=" + s.Id;
             MyConnection.ExecuteNonQuery(Requete);
         }
 
@@ -51,12 +52,20 @@ namespace CompetencePlus.PackageStagiaires
                 s.Nom = (string) read["Nom"];
                 s.Prenom = (string)read["Prenom"];
                 s.DateNaissance = (DateTime)read["DateNaissance"];
-                s.Sexe = read.GetBoolean(5);
+                s.Sexe = read.GetInt32(5);
                 s.Cin = read.GetString(6);
                 s.Email = read.GetString(7);
                 s.Telephone = read.GetString(8);
                 s.Adresse = read.GetString(9);
-                s.ProfilImage = read.GetString(10);
+                try
+                {
+                    s.ProfilImage = read.GetString(10);
+                }
+                catch (Exception )
+                {
+                    
+                }
+                
                 s.Etat = read.GetInt32(11);
                 ListStagiaires.Add(s);
 
@@ -80,7 +89,7 @@ namespace CompetencePlus.PackageStagiaires
                 s.Nom = (string)read["Nom"];
                 s.Prenom = (string)read["Prenom"];
                 s.DateNaissance = (DateTime)read["DateNaissance"];
-                s.Sexe = read.GetBoolean(5);
+                s.Sexe = read.GetInt32(5);
                 s.Cin = read.GetString(6);
                 s.Email = read.GetString(7);
                 s.Telephone = read.GetString(8);

@@ -38,9 +38,9 @@ namespace CompetencePlus.PackageStagiaires
             get { return dateNaissance; }
             set { dateNaissance = value; }
         }
-        private bool sexe;
+        private int sexe;
 
-        public bool Sexe
+        public int Sexe
         {
             get { return sexe; }
             set { sexe = value; }
