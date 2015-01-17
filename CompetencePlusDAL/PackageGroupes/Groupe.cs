@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using CompetencePlus.PackageFilieres;
+using CompetencePlus.PackageAnneeFormations;
 
 
 namespace CompetencePlus.PackageGroupes
@@ -43,6 +44,13 @@ namespace CompetencePlus.PackageGroupes
         {
             get { return this.filiere; }
             set { this.filiere = value; }
+        }
+        private AnneeFormation anneeFormation;
+
+        public AnneeFormation AnneeFormation
+        {
+            get { return anneeFormation; }
+            set { anneeFormation = value; }
         }
 
         public Groupe()

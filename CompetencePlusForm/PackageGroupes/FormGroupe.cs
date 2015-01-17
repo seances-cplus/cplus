@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using CompetencePlus.PackageFilieres;
+using CompetencePlus.PackageAnneeFormations;
 
 namespace CompetencePlus.PackageGroupes
 {
@@ -25,6 +26,7 @@ namespace CompetencePlus.PackageGroupes
             g.Code = CodeTextBox.Text;
             g.Description = DescriptionTextBox.Text;
             g.Filiere = (Filiere)filiereBindingSource.Current;
+            g.AnneeFormation = (AnneeFormation)anneeFormationBindingSource.Current;
             new GroupeBAO().Add(g);
             this.Dispose();
         }
@@ -47,6 +49,9 @@ namespace CompetencePlus.PackageGroupes
         {
             filiereBindingSource.DataSource = null;
             filiereBindingSource.DataSource = new FiliereBAO().Select();
+
+            anneeFormationBindingSource.DataSource = null;
+            anneeFormationBindingSource.DataSource = new AnneeFormationDAO().Select();
         }
 
         private void NomTextBox_Validating(object sender, CancelEventArgs e)

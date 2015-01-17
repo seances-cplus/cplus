@@ -99,7 +99,6 @@
       <DependentUpon>FormUpdateFormateur.cs</DependentUpon>
     </Compile>
     <Compile Include="PackageFormations\Class2.cs" />
-    <Compile Include="PackageGroupes\Class1.cs" />
     <Compile Include="PackageGroupes\FormGestionGroupes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -242,6 +241,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Properties\DataSources\CompetencePlus.PackageAnneeFormations.AnneeFormation.datasource" />
     <None Include="Properties\DataSources\CompetencePlus.PackageDB.IncrementationDB.datasource" />
     <None Include="Properties\DataSources\CompetencePlus.PackageFilieres.Filiere.datasource" />
     <None Include="Properties\DataSources\CompetencePlus.PackageGroupes.Groupe.datasource" />

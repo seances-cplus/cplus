@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using CompetencePlus.PackageFilieres;
+using CompetencePlus.PackageAnneeFormations;
 
 namespace CompetencePlus.PackageGroupes
 {
@@ -16,7 +17,9 @@ namespace CompetencePlus.PackageGroupes
         {
             InitializeComponent();
         }
+        int id = 0;
         public void Update(Groupe g) {
+            id = g.Id;
             NomTextBox.Text = g.Nom;
             CodeTextBox.Text = g.Code;
             DescriptionTextBox.Text = g.Description;
@@ -27,10 +30,11 @@ namespace CompetencePlus.PackageGroupes
         {
             Groupe g = new Groupe();
             g.Nom = NomTextBox.Text;
-            g.Id = 1;
+            g.Id = id;
             g.Code = CodeTextBox.Text;
             g.Description = DescriptionTextBox.Text;
             g.Filiere = (Filiere)filiereBindingSource.Current;
+            g.AnneeFormation = (AnneeFormation)anneeFormationBindingSource.Current;
             new GroupeBAO().Update(g);
             this.Dispose();
         }
@@ -44,6 +48,9 @@ namespace CompetencePlus.PackageGroupes
         {
             filiereBindingSource.DataSource = null;
             filiereBindingSource.DataSource = new FiliereBAO().Select();
+
+            anneeFormationBindingSource.DataSource = null;
+            anneeFormationBindingSource.DataSource = new AnneeFormationDAO().Select();
         }
     }
 }

@@ -6,6 +6,7 @@ using System.Data.OleDb;
 using CompetencePlus.Outils;
 using CompetencePlus.PackageFilieres;
 using CompetencePlus.Tools;
+using CompetencePlus.PackageAnneeFormations;
 
 namespace CompetencePlus.PackageGroupes
 {
@@ -13,13 +14,13 @@ namespace CompetencePlus.PackageGroupes
     {
         public  void Add(Groupe g)
         {
-            string Requete = "Insert into Groupes(Nom,Code,Description,Filiere_id) values ('" + g.Nom + "','" + g.Code + "','" + g.Description + "'," + g.Filiere.Id + ")";
+            string Requete = "Insert into Groupes(Nom,Code,Description,Filiere_id,AnneeFormation_id) values ('" + g.Nom + "','" + g.Code + "','" + g.Description + "'," + g.Filiere.Id +","+g.AnneeFormation.Id+ ")";
             MyConnection.ExecuteNonQuery(Requete);
         }
 
         public  void Update(Groupe g)
         {
-            string Requete = "Update Filieres set Code ='" + g.Code + "',Nom ='" + g.Nom + "',Description='" + g.Description + "',Filiere_id=" + g.Filiere.Id + " where id =" + g.Id;
+            string Requete = "Update Groupes set Code ='" + g.Code + "',Nom ='" + g.Nom + "',Description='" + g.Description + "',Filiere_id=" + g.Filiere.Id +",AnneeFormation_id="+g.AnneeFormation.Id+" where id =" + g.Id;
             MyConnection.ExecuteNonQuery(Requete);
         }
 
@@ -42,6 +43,7 @@ namespace CompetencePlus.PackageGroupes
                 g.Code = read.GetString(2);
                 g.Description = read.GetString(3);
                 g.Filiere = new FiliereDAO().FindById(read.GetInt32(4));
+                g.AnneeFormation = new AnneeFormationDAO().FindById(read.GetInt32(5));
                 ListGroupe.Add(g);
 
             }
@@ -56,9 +58,11 @@ namespace CompetencePlus.PackageGroupes
             Groupe g = new Groupe();
             read.Read();
             g.Id = read.GetInt32(0);
-            g.Code = read.GetString(1);
-            g.Nom = read.GetString(2);
-            g.Filiere = new FiliereDAO().FindById(read.GetInt32(3));
+            g.Nom = read.GetString(1);
+            g.Code = read.GetString(2);
+            g.Description = read.GetString(3);
+            g.Filiere = new FiliereDAO().FindById(read.GetInt32(4));
+            g.AnneeFormation = new AnneeFormationDAO().FindById(read.GetInt32(5));
             MyConnection.Close();
             return g; 
         }
@@ -70,9 +74,11 @@ namespace CompetencePlus.PackageGroupes
             read.Read();
             Groupe g = new Groupe();
             g.Id = read.GetInt32(0);
-            g.Code = read.GetString(1);
-            g.Nom = read.GetString(2);
-            g.Filiere = new FiliereDAO().FindById(read.GetInt32(3));
+            g.Nom = read.GetString(1);
+            g.Code = read.GetString(2);
+            g.Description = read.GetString(3);
+            g.Filiere = new FiliereDAO().FindById(read.GetInt32(4));
+            g.AnneeFormation = new AnneeFormationDAO().FindById(read.GetInt32(5));
             MyConnection.Close();
             return g;
         }

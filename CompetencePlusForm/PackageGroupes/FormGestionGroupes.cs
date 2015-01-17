@@ -47,8 +47,7 @@ namespace CompetencePlus.PackageGroupes
         private void groupeDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 
-            try
-            {
+           
                 Groupe g = (Groupe)groupeBindingSource.Current;
                 NomLabel.Text = g.Nom;
                 CodeLabel.Text = g.Code;
@@ -64,11 +63,7 @@ namespace CompetencePlus.PackageGroupes
                     new GroupeBAO().Delete(g.Id);
                     this.refresh();
                 }
-            }
-            catch (Exception exception)
-            {
-                MessageBox.Show(exception.Message);
-            }
+           
         }
 
         private void BtFirst_Click(object sender, EventArgs e)
